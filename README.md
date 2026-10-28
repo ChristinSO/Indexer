@@ -2,6 +2,8 @@
 
 Local photo search with EmbeddingGemma 2. Rank or filter results across all photos or just favorites.
 
+![Indexer Alpha demo](public/indexer.gif)
+
 Requires Windows, Node.js 22.12+, and [uv](https://docs.astral.sh/uv/).
 
 ```powershell
