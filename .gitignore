@@ -1,0 +1,48 @@
+# Dependencies, builds, and caches
+.venv/
+venv/
+node_modules/
+dist/
+__pycache__/
+.pytest_cache/
+.cache/
+*.py[cod]
+*.tsbuildinfo
+
+# Local app data, photos, and logs
+.local/
+IndexerAlpha/
+originals/
+thumbnails/
+previews/
+qa-photos/
+*.sqlite*
+*.db
+*.db-shm
+*.db-wal
+*.log
+
+# Downloaded models, weights, and tokenizer binaries
+model-cache/
+models/
+weights/
+checkpoints/
+.huggingface/
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.ckpt
+*.gguf
+*.onnx
+*.onnx_data
+*.tflite
+*.h5
+*.model
+
+# Local configuration and OS files
+.env
+.env.*
+!.env.example
+.DS_Store
+Thumbs.db

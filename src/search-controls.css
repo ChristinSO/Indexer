@@ -1,0 +1,63 @@
+.search-area {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+  min-width: 0;
+  max-width: 1010px;
+}
+.search-area .searchbar { flex: 1; min-width: 0; max-width: none; }
+.search-mode-switch {
+  display: flex;
+  gap: 2px;
+  padding: 4px;
+  flex-shrink: 0;
+  border-radius: 26px;
+  background: #e9eef6;
+}
+.mode-choice { position: relative; }
+.mode-choice > button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  min-height: 42px;
+  padding: 10px 14px;
+  border-radius: 22px;
+  background: transparent;
+  color: #5f6368;
+  font-size: 13px;
+}
+.mode-choice > button:hover { background: #dfe6f0; }
+.mode-choice > button[aria-pressed=true] { background: #d3e3fd; color: #0842a0; font-weight: 600; }
+.mode-tooltip-position { position: absolute; right: 0; top: 100%; padding-top: 10px; z-index: 25; width: 260px; }
+.mode-tooltip {
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: #30343b;
+  color: #fff;
+  box-shadow: 0 4px 16px #20212433;
+  font-size: 12px;
+  line-height: 1.6;
+}
+.mode-tooltip strong { display: block; margin-bottom: 4px; font-weight: 600; }
+.search-options { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; margin: 0 0 24px; }
+.cutoff-count { color: #5f6368; font-size: 12px; }
+@media (min-width: 761px) and (max-width: 1000px) {
+  .topbar { gap: 10px; }
+  .search-area { gap: 8px; }
+  .mode-choice > button { padding: 10px; gap: 5px; }
+}
+@media (max-width: 760px) {
+  .search-area { order: 4; flex: auto; width: 100%; max-width: none; gap: 8px; }
+  .search-area .searchbar { order: 0; padding-left: 6px; padding-right: 6px; gap: 2px; }
+  .search-area .search-submit, .search-area .search-clear { width: 32px; height: 36px; }
+  .search-mode-switch { padding: 3px; gap: 0; }
+  .mode-choice > button { width: 42px; height: 42px; padding: 0; }
+  .mode-label { display: none; }
+  .mode-tooltip-position { width: 230px; }
+  .search-options { margin-bottom: 20px; gap: 8px; }
+  .cutoff-control { width: 100%; gap: 8px 12px; }
+  .cutoff-control input { flex: 1; min-width: 90px; width: 100px; }
+  .cutoff-presets { width: 100%; }
+}

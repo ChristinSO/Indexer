@@ -1,0 +1,20 @@
+[project]
+name = "indexer-alpha"
+version = "0.1.0"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+  "fastapi", "uvicorn", "python-multipart", "numpy", "pillow", "psutil",
+  "sentence-transformers", "transformers", "torch", "torchvision", "huggingface-hub",
+]
+
+[dependency-groups]
+dev = ["pytest", "httpx"]
+
+[[tool.uv.index]]
+name = "pytorch"
+url = "https://download.pytorch.org/whl/cu128"
+explicit = true
+
+[tool.uv.sources]
+torch = { index = "pytorch" }
+torchvision = { index = "pytorch" }
